@@ -1,0 +1,99 @@
+// Decompiled by DJ v3.11.11.95 Copyright 2009 Atanas Neshkov  Date: 2018/7/2 15:29:40
+// Home Page: http://members.fortunecity.com/neshkov/dj.html  http://www.neshkov.com/dj.html - Check often for new version!
+// Decompiler options: packimports(3) 
+
+package com.sun.proxy;
+
+import java.lang.reflect.*;
+import testDynamicProxy.IService;
+
+public final class $Proxy0 extends Proxy
+    implements IService
+{
+
+    public $Proxy0(InvocationHandler invocationhandler)
+    {
+        super(invocationhandler);
+    }
+
+    public final boolean equals(Object obj)
+    {
+        try
+        {
+            return ((Boolean)super.h.invoke(this, m1, new Object[] {
+                obj
+            })).booleanValue();
+        }
+        catch(Error _ex) { }
+        catch(Throwable throwable)
+        {
+            throw new UndeclaredThrowableException(throwable);
+        }
+    }
+
+    public final void sayHello()
+    {
+        try
+        {
+            super.h.invoke(this, m3, null);
+            return;
+        }
+        catch(Error _ex) { }
+        catch(Throwable throwable)
+        {
+            throw new UndeclaredThrowableException(throwable);
+        }
+    }
+
+    public final String toString()
+    {
+        try
+        {
+            return (String)super.h.invoke(this, m2, null);
+        }
+        catch(Error _ex) { }
+        catch(Throwable throwable)
+        {
+            throw new UndeclaredThrowableException(throwable);
+        }
+    }
+
+    public final int hashCode()
+    {
+        try
+        {
+            return ((Integer)super.h.invoke(this, m0, null)).intValue();
+        }
+        catch(Error _ex) { }
+        catch(Throwable throwable)
+        {
+            throw new UndeclaredThrowableException(throwable);
+        }
+    }
+
+    private static Method m1;
+    private static Method m3;
+    private static Method m2;
+    private static Method m0;
+
+    static 
+    {
+        try
+        {
+            m1 = Class.forName("java.lang.Object").getMethod("equals", new Class[] {
+                Class.forName("java.lang.Object")
+            });
+            m3 = Class.forName("testDynamicProxy.IService").getMethod("sayHello", new Class[0]);
+            m2 = Class.forName("java.lang.Object").getMethod("toString", new Class[0]);
+            m0 = Class.forName("java.lang.Object").getMethod("hashCode", new Class[0]);
+        }
+        catch(NoSuchMethodException nosuchmethodexception)
+        {
+            throw new NoSuchMethodError(nosuchmethodexception.getMessage());
+        }
+        catch(ClassNotFoundException classnotfoundexception)
+        {
+            throw new NoClassDefFoundError(classnotfoundexception.getMessage());
+        }
+    }
+}
